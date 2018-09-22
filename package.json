@@ -6,6 +6,7 @@
   "license": "MIT",
   "homepage": "https://github.com/dantehemerson/devicons-server#readme",
   "scripts": {
+		"dev": "nodemon server.js",
     "start": "node server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -19,5 +20,8 @@
   },
   "dependencies": {
     "express": "^4.16.3"
+  },
+  "devDependencies": {
+    "nodemon": "^1.18.4"
   }
 }
