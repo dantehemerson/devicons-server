@@ -1,0 +1,24 @@
+:root {
+	--primary: #1B998B;
+	--secondary: #FFFD82;
+	--alternative: #ED217C;
+	--jungle: #4A0D67;
+	--floyd: #FF9B71;
+}
+
+.container.container {
+	width: 100% !important;
+}
+
+.Hero {
+	height: 240px;
+	display: flex;
+	color: white;
+	align-items: center;
+	text-align: center;
+	background: var(--primary);
+}
+
+.Hero__title {
+	font-size: 2.5rem;
+}

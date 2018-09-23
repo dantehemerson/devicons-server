@@ -12,6 +12,8 @@ const createApp = () => {
 		res.render('index')
 	})
 
+	app.use(express.static('app/public'))
+
 	return app
 }
 
