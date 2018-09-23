@@ -6,10 +6,6 @@
 	--floyd: #FF9B71;
 }
 
-.container.container {
-	width: 100% !important;
-}
-
 .Hero {
 	height: 240px;
 	display: flex;
@@ -19,6 +15,21 @@
 	background: var(--primary);
 }
 
+.Hero .container {
+	width: 100% !important;
+}
+
 .Hero__title {
 	font-size: 2.5rem;
+}
+
+.Filter {
+	padding-top: 20px;
+	padding-bottom: 20px;
+	text-align: center;
+}
+
+.Filter .input {
+	width: 100%;
+	max-width: 400px;
 }
