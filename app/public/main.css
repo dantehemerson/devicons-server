@@ -34,6 +34,10 @@
 	max-width: 400px;
 }
 
+.IconsWrapper {
+	min-height: calc(100vh - 340px - 78px);
+}
+
 .Footer {
 	height: 100px;
 	background: #002538;
