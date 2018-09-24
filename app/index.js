@@ -32,7 +32,9 @@ const createApp = () => {
 	})
 
 	app.get('/', (req, res) => {
-		res.render('index')
+		res.render('index', {
+			icons
+		})
 	})
 
 	app.get('/json', (req, res) => {

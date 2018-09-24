@@ -5,5 +5,9 @@ block content
 	include ./filter
 
 	.IconsWrapper.ui.container
-		div
-			p List of icons
+		each icon in icons
+			.Item
+				.Item__icon
+					!= icon.icon
+				.Item__name
+					p= icon.name

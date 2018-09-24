@@ -38,6 +38,18 @@
 	min-height: calc(100vh - 340px - 78px);
 }
 
+.Item {
+	width: 100px;
+}
+
+.Item__icon {
+
+}
+
+.Item__name {
+
+}
+
 .Footer {
 	height: 100px;
 	background: #002538;
