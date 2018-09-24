@@ -36,18 +36,43 @@
 
 .IconsWrapper {
 	min-height: calc(100vh - 340px - 78px);
+	display: flex !important;
+	flex-wrap: wrap;
+	margin-bottom: 40px;
 }
 
 .Item {
-	width: 100px;
+	width: 20%;
+	padding: 0;
+}
+
+.Item__content {
+	height: 110px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	cursor: pointer;
+	padding: 0 5px;
+	transition: .2s;
+	border-radius: 3px;
+}
+
+.Item__content:hover {
+	background: #dcdcdc;
 }
 
 .Item__icon {
+	width: 50px;
+}
 
+.Item__icon svg {
+	width: 100%;
+  height: auto;
 }
 
 .Item__name {
-
+	text-align: center;
 }
 
 .Footer {

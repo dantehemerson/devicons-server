@@ -7,7 +7,8 @@ block content
 	.IconsWrapper.ui.container
 		each icon in icons
 			.Item
-				.Item__icon
-					!= icon.icon
-				.Item__name
-					p= icon.name
+				.Item__content
+					.Item__icon
+						!= icon.icon
+					.Item__name
+						p= icon.name
