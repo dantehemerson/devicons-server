@@ -2,6 +2,7 @@ const express = require('express')
 const path = require('path')
 const devicons = require('devicon-2.2/devicon.json')
 const fs = require('fs')
+const Fuse = require('fuse.js/dist/fuse.min.js')
 
 const createApp = () => {
 	let icons = []
@@ -34,6 +35,18 @@ const createApp = () => {
 	app.get('/', (req, res) => {
 		res.render('index', {
 			icons
+		})
+	})
+
+	app.get('/search/:query', (req, res) => {
+		const query = req.params.query
+		const options = {
+			keys: ['name']
+		}
+		const fuse = new Fuse(icons, options)
+		const filter = fuse.search(query)
+		res.render('index', {
+			icons: filter
 		})
 	})
 
