@@ -75,6 +75,30 @@
 	text-align: center;
 }
 
+@media only screen and (max-width: 576px) {
+	.Item {
+		width: 50%;
+	}
+}
+
+@media only screen and (min-width: 576px) {
+	.Item {
+		width: 33.333%;
+	}
+}
+
+@media only screen and (min-width: 768px) {
+	.Item {
+		width: 25%;
+	}
+}
+
+@media only screen and (min-width: 1200px) {
+	.Item {
+		width: 20%;
+	}
+}
+
 .Footer {
 	height: 100px;
 	background: #002538;
