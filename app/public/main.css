@@ -124,3 +124,9 @@
 .Footer__copyright {
 	margin: 0;
 }
+
+.NotFound {
+	width: 100%;
+	height: fit-content;
+	height: -moz-fit-content;
+}

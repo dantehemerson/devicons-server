@@ -14,4 +14,6 @@ block content
 						p= icon.name
 						p= originalUrl
 		else
-			p.ui.center There are no values
+			.NotFound.ui.red.message
+				.header Icon Not Found
+				p Sorry, icon was not found. Try searching with other pattern.
