@@ -12,7 +12,19 @@
 	color: white;
 	align-items: center;
 	text-align: center;
-	background: var(--primary);
+	position: relative;
+	background: #1b998bdb;
+}
+
+.Hero::before {
+	content: '';
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	left: 0;
+	z-index: -1;
+	top: 0;
+	background: url(https://oxen.tech/wp-content/uploads/2018/05/tech-tip-background.jpg);
 }
 
 .Hero .container {
