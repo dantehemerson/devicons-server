@@ -85,6 +85,7 @@
 
 .Item__name {
 	text-align: center;
+	color: #545454;
 }
 
 @media only screen and (max-width: 576px) {
