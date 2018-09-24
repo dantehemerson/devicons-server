@@ -3,23 +3,23 @@ const path = require('path')
 const devicons = require('devicon-2.2/devicon.json')
 const fs = require('fs')
 
-let icons = []
-let count = 0
-
-devicons.forEach(icon => {
-	count += icon.versions.svg.length
-	icon.versions.svg.forEach(type => {
-		let ico = {}
-		ico['name'] = `${icon.name}-${type}`
-		ico['icon'] = fs.readFileSync(
-			require.resolve(`devicon-2.2/icons/${icon.name}/${ico['name']}.svg`),
-			'utf-8'
-		)
-		icons.push(ico)
-	})
-})
-
 const createApp = () => {
+	let icons = []
+	let count = 0
+
+	devicons.forEach(icon => {
+		count += icon.versions.svg.length
+		icon.versions.svg.forEach(type => {
+			let ico = {}
+			ico['name'] = `${icon.name}-${type}`
+			ico['icon'] = fs.readFileSync(
+				require.resolve(`devicon-2.2/icons/${icon.name}/${ico['name']}.svg`),
+				'utf-8'
+			)
+			icons.push(ico)
+		})
+	})
+
 	const app = express()
 
 	app.disable('x-powered-by')
@@ -37,6 +37,15 @@ const createApp = () => {
 
 	app.get('/json', (req, res) => {
 		res.json(icons)
+	})
+
+	app.get('/:icon.svg', (req, res, next) => {
+		const objIcon = icons.find(i => i.name == req.params.icon)
+		if(!objIcon) {
+			return res.status(404).send('Error 404: Icon Not Found')
+		}
+
+		res.send(objIcon.name)
 	})
 
 	app.use(express.static('app/public'))
