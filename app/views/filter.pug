@@ -1,4 +1,7 @@
 .Filter.ui.container
 	.ui.action.input
 		input(type='text' placeholder='Search...')
-		button.ui.teal.button Search
+		.ui.animated.teal.button(tabindex="0")
+			.visible.content Search
+			.hidden.content
+				i.right.search.icon
