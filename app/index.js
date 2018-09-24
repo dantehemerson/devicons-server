@@ -46,8 +46,7 @@ const createApp = () => {
 		if(!objIcon) {
 			return res.status(404).send('Error 404: Icon Not Found')
 		}
-
-		res.send(objIcon.name)
+		res.type('image/svg+xml').send(objIcon.icon)
 	})
 
 	app.use(express.static('app/public'))
