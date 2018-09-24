@@ -1,7 +1,8 @@
-.Filter.ui.container
-	.ui.action.input
-		input#searchInput(type='text' placeholder='Search...')
-		#searchButton.ui.animated.teal.button
-			.visible.content Search
-			.hidden.content
-				i.search.icon
+mixin filter(query)
+	.Filter.ui.container
+		.ui.action.input
+			input#searchInput(type='text' placeholder='Search...', value=query)
+			#searchButton.ui.animated.teal.button
+				.visible.content Search
+				.hidden.content
+					i.search.icon

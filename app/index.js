@@ -46,7 +46,8 @@ const createApp = () => {
 		const fuse = new Fuse(icons, options)
 		const filter = fuse.search(query)
 		res.render('index', {
-			icons: filter
+			icons: filter,
+			query
 		})
 	})
 
