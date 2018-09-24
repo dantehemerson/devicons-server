@@ -1,14 +1,23 @@
 (function() {
 	let searchInput = document.getElementById('searchInput')
+	let searchButton = document.getElementById('searchButton')
 
-	searchInput.addEventListener('keypress', function(event) {
+	function search() {		
 		let searchText = searchInput.value
-		if(event.keyCode === 13) {
-			if(searchText === '') {				
-				return
-			} else {
-				location.href = `/search/${searchText}`
-			} 			
+		if(searchText === '') {
+			return
 		}
-	})	
+		location.href = `/search/${searchText}`					
+	}
+	
+	searchInput.addEventListener('keypress', function(event) {
+			if(event.keyCode === 13) {
+				search()
+			}
+	})
+
+	searchButton.addEventListener('click', function() {
+		search()
+	})
+
 })()
