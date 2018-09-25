@@ -8,9 +8,10 @@
 	function search() {		
 		let searchText = searchInput.value
 		if(searchText === '') {
-			return
+			location.href = `${window.location.protocol}//${window.location.host}`			
+		} else {
+			location.href = `/search/${searchText}`					
 		}
-		location.href = `/search/${searchText}`					
 	}
 	
 	searchInput.addEventListener('keypress', function(event) {
