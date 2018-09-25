@@ -1,6 +1,9 @@
 (function() {
-	let searchInput = document.getElementById('searchInput')
+	let searchInput = document.getElementById('searchInput')	
 	let searchButton = document.getElementById('searchButton')
+
+	searchInput.focus()
+	searchInput.selectionStart = searchInput.selectionEnd = 10000
 
 	function search() {		
 		let searchText = searchInput.value
