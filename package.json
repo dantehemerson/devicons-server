@@ -7,7 +7,7 @@
   "homepage": "https://github.com/dantehemerson/devicons-server#readme",
   "scripts": {
     "dev": "nodemon server.js",
-    "start": "node server.js",
+    "start": "NODE_ENV=production node server.js",
     "test": "echo \"Error: no test specified\" && exit 0"
   },
   "repository": {

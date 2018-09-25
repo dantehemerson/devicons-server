@@ -1,8 +1,11 @@
+const env = process.env
 const express = require('express')
 const path = require('path')
 const devicons = require('devicon-2.2/devicon.json')
 const fs = require('fs')
 const Fuse = require('fuse.js/dist/fuse.min.js')
+
+const isDev = !(env.NODE_ENV === 'production')
 
 const createApp = () => {
 	let icons = []
@@ -28,7 +31,8 @@ const createApp = () => {
 	app.set('view engine', 'pug')
 
 	app.use((req, res, next) => {
-		res.locals.count = count
+		app.locals.count = count
+		app.locals.host = `${ isDev ? req.protocol : 'https'}://${ req.get('host') }`
 		next()
 	})
 
