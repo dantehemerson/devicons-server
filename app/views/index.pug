@@ -6,7 +6,7 @@ block content
 	+ filter(query)
 	.IconsWrapper.ui.container
 		each icon in icons
-			a.Item(href='https://dantecalderon.com', target='_blank')
+			a.Item(href=`${host.replace(/\/$/, "")}/${icon.name}.svg`, target='_blank')
 				.Item__content
 					.Item__icon
 						!= icon.icon
