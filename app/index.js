@@ -33,6 +33,7 @@ const createApp = () => {
 	app.use((req, res, next) => {
 		app.locals.count = count
 		app.locals.host = `${ isDev ? req.protocol : 'https'}://${ req.get('host') }`
+		app.locals.originalUrl = `${ app.locals.host}${ req.path }`
 		next()
 	})
 
